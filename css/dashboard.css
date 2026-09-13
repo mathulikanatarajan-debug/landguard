@@ -1,0 +1,312 @@
+/* ==========================================================================
+   LANDSLIDEGUARD NER - DASHBOARD STYLES
+   ========================================================================== */
+
+/* Dashboard Layout Grid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* Header Banner */
+.dashboard-header-banner {
+  grid-column: span 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(13, 21, 39, 0.9) 0%, rgba(0, 102, 255, 0.15) 100%);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 20px 30px;
+}
+
+.cmd-title h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.cmd-title p {
+  font-size: 0.85rem;
+  color: var(--cyan-glow);
+  font-family: var(--font-mono);
+  margin-top: 4px;
+}
+
+/* KPI Cards Grid */
+.kpi-cards-wrapper {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.kpi-card {
+  background: var(--bg-glass-card);
+  border: 1px solid var(--bg-glass-border);
+  border-radius: var(--border-radius-md);
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-fast);
+}
+
+.kpi-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan-glow);
+  box-shadow: 0 8px 25px rgba(0, 243, 255, 0.15);
+}
+
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--cyan-glow);
+}
+
+.kpi-card.risk-high::before { background: var(--risk-high); }
+.kpi-card.risk-critical::before { background: var(--risk-critical); }
+.kpi-card.risk-moderate::before { background: var(--risk-moderate); }
+.kpi-card.risk-low::before { background: var(--risk-low); }
+
+.kpi-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kpi-label i {
+  font-size: 1.2rem;
+  color: var(--cyan-glow);
+}
+
+.kpi-value {
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+  margin: 12px 0 4px 0;
+  color: #fff;
+}
+
+.kpi-subtext {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+/* Central Risk Gauge Container */
+.gauge-card {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.gauge-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: 20px 0;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gauge-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.08);
+  stroke-width: 18;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke: var(--risk-high);
+  stroke-width: 18;
+  stroke-linecap: round;
+  stroke-dasharray: 691; /* 2 * PI * 110 */
+  stroke-dashoffset: 691;
+  transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.5s ease;
+  filter: drop-shadow(0 0 12px var(--risk-high-glow));
+}
+
+.gauge-center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gauge-percentage {
+  font-size: 3.2rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.gauge-risk-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--risk-high);
+  margin-top: 4px;
+}
+
+/* Dynamic Pulse Ring around Gauge */
+.gauge-pulse-ring {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--risk-high);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gauge-pulse-ring.pulse-low {
+  border-color: var(--risk-low);
+}
+
+.gauge-pulse-ring.pulse-moderate {
+  border-color: var(--risk-moderate);
+  animation: pulse-ring 2.5s infinite ease-out;
+}
+
+.gauge-pulse-ring.pulse-high {
+  border-color: var(--risk-high);
+  animation: pulse-ring 1.8s infinite ease-out;
+}
+
+.gauge-pulse-ring.pulse-critical {
+  border-color: var(--risk-critical);
+  animation: pulse-ring 1.2s infinite ease-out;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.18); opacity: 0; }
+}
+
+/* Timeline Forecast Card */
+.timeline-card {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timeline-track-container {
+  position: relative;
+  margin: 35px 0 20px 0;
+  padding: 0 10px;
+}
+
+.timeline-line-bg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.timeline-line-progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 65%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--cyan-glow), var(--risk-high));
+  transform: translateY(-50%);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--risk-high-glow);
+}
+
+.timeline-nodes {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.node-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #0d1527;
+  border: 3px solid var(--cyan-glow);
+  box-shadow: 0 0 10px var(--cyan-glow-dim);
+  transition: var(--transition-fast);
+}
+
+.timeline-node.active .node-dot {
+  background: var(--risk-high);
+  border-color: #fff;
+  box-shadow: 0 0 15px var(--risk-high);
+  transform: scale(1.3);
+}
+
+.node-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.node-prob {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--cyan-glow);
+}
+
+.timeline-node.active .node-prob {
+  color: var(--risk-high);
+}
+
+.forecast-banner-msg {
+  background: rgba(255, 153, 0, 0.1);
+  border: 1px dashed var(--risk-high);
+  border-radius: var(--border-radius-sm);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font-size: 0.88rem;
+}
+
+.forecast-banner-msg i {
+  color: var(--risk-high);
+  font-size: 1.2rem;
+}

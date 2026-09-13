@@ -1,0 +1,51 @@
+{
+  "en": {
+    "what_is_landslide": "A landslide is the movement of rock, earth, or debris down a sloped section of land, triggered by rain, saturation, or seismic activity.",
+    "causes": "Landslides are primarily caused by prolonged heavy rainfall, high soil saturation reducing soil strength, steep terrain slope, deforestation, and geological instability.",
+    "current_risk": "The current overall landslide risk index for North-East India stands at HIGH (76%), driven by continuous intense monsoon rainfall over vulnerable hill slopes in Sikkim and Darjeeling.",
+    "rainfall": "Heavy rainfall (42 mm over 6 hours) saturates the topsoil, increasing Pore Water Pressure and dramatically weakening slope stability.",
+    "soil": "Soil saturation is currently at 81%. When saturation exceeds 75-80%, soil shear strength drops sharply, making slopes extremely prone to failure.",
+    "terrain": "Steep slopes (30° to 45°) combined with elevations over 800m in NE India increase gravitational driving forces on wet earth mass.",
+    "safety": "Stay alert to sudden water color changes in streams, small rockfalls, or ground cracks. Evacuate along pre-planned high ground routes immediately if warning sounds.",
+    "evacuation": "Move perpendicular to the path of mudflows or debris. Do NOT cross flooded river beds or stay near unstable slope edges.",
+    "prep": "Prepare an Emergency Go-Bag containing non-perishable food, water, first aid kit, flashlight, battery radio, whistle, and essential documents.",
+    "before_during_after": "BEFORE: Monitor alerts and secure family go-bag. DURING: Seek higher ground immediately, avoid stream channels. AFTER: Stay away from slide area until cleared by authorities.",
+    "default": "I am operating in Offline Mode using verified safety knowledge. For live real-time sensor updates, please restore network connectivity."
+  },
+  "ta": {
+    "what_is_landslide": "நிலச்சரிவு என்பது மழை, மண் ஈரப்பதம் அல்லது நிலநடுக்கத்தால் தூண்டப்பட்டு, பாறைகள், மண் அல்லது குப்பைகள் சாய்வான பகுதியிலிருந்து கீழ்நோக்கி நகர்வதாகும்.",
+    "causes": "தொடர்ச்சியான கனமழை, மண்ணின் அதிக ஈரப்பதம், செங்குத்தான நிலப்பரப்பு மற்றும் காடழிப்பு ஆகியவை நிலச்சரிவுக்கு முக்கிய காரணங்களாகும்.",
+    "current_risk": "வடகிழக்கு இந்தியாவின் தற்போதைய நிலச்சரிவு அபாயக் குறியீடு அதிகமாக (76%) உள்ளது.",
+    "rainfall": "கனமழை (6 மணிநேரத்தில் 42 மி.மீ) மேல்மண்ணை நனைத்து சரிவின் ஸ்திரத்தன்மையை கணிசமாகக் குறைக்கிறது.",
+    "soil": "மண் ஈரப்பதம் தற்போது 81% ஆக உள்ளது. ஈரப்பதம் 75%-க்கு மேல் அதிகரிக்கும் போது நிலச்சரிவு ஏற்படும் அபாயம் அதிகம்.",
+    "safety": "ஓடைகளில் நீர் நிறம் மாறுதல், சிறிய பாறை சரிவுகள் அல்லது நிலத்தில் விரிசல்களைக் கவனியுங்கள். எச்சரிக்கை ஒலித்தால் உடனடியாக உயர்ந்த இடங்களுக்குச் செல்லுங்கள்.",
+    "evacuation": "சேறு பாயும் திசைக்கு செங்குத்தாக பாதுகாப்பான உயர்ந்த இடங்களுக்கு செல்லுங்கள்.",
+    "prep": "உணவு, குடிநீர், முதலுதவி பெட்டி, டார்ச் லைட் மற்றும் முக்கிய ஆவணங்கள் அடங்கிய அவசரப் பையைத் தயார் செய்யுங்கள்.",
+    "default": "நான் ஆஃப்லைன் பயன்முறையில் செயல்படுகிறேன். நேரலை தரவுகளுக்கு இணைய இணைப்பை சரிபார்க்கவும்."
+  },
+  "hi": {
+    "what_is_landslide": "भूस्खलन भारी वर्षा, मिट्टी के संतृप्ति या भूकंपीय गतिविधि के कारण चट्टानों, मिट्टी या मलबे का ढलान से नीचे की ओर खिसकना है।",
+    "causes": "लगातार भारी बारिश, मिट्टी की उच्च संतृप्ति, तीव्र ढलान और वनों की कटाई भूस्खलन के मुख्य कारण हैं।",
+    "current_risk": "उत्तर-पूर्व भारत के लिए वर्तमान भूस्खलन जोखिम 76% (उच्च) है।",
+    "rainfall": "भारी बारिश (6 घंटे में 42 मिमी) ऊपरी मिट्टी को संतृप्त करती है, जिससे ढलान की स्थिरता कमजोर हो जाती है।",
+    "soil": "मिट्टी का संतृप्ति स्तर 81% है। 75% से अधिक संतृप्ति पर ढलान के ढहने का खतरा अत्यधिक बढ़ जाता है।",
+    "safety": "जल धाराओं के रंग परिवर्तन, छोटी चट्टानों के गिरने या जमीन में दरारों पर ध्यान दें। चेतावनी मिलने पर तुरंत सुरक्षित स्थान पर जाएं।",
+    "evacuation": "मलबे के बहाव के लंबवत दिशा में ऊंचे और सुरक्षित स्थानों की ओर भागें।",
+    "prep": "आपातकालीन बैग तैयार रखें जिसमें सूखा भोजन, पानी, प्राथमिक चिकित्सा किट, टॉर्च और महत्वपूर्ण दस्तावेज हों।",
+    "default": "मैं ऑफ़लाइन मोड में काम कर रहा हूँ। लाइव डेटा के लिए नेटवर्क कनेक्शन बहाल करें।"
+  },
+  "te": {
+    "what_is_landslide": "కొండచరియలు విరిగిపడటం అంటే వర్షం లేదా భూకంపాల వల్ల కొండల నుండి రాళ్ళు, మట్టి కిందకు జారిపడటం.",
+    "causes": "అధిక వర్షపాతం, నేలలో నిండిన తేమ, నిటారైన కొండ వాలులు ప్రధాన కారణాలు.",
+    "current_risk": "ఈశాన్య భారతదేశంలో ప్రస్తుత ప్రమాద తీవ్రత 76% (అధికం)గా ఉంది.",
+    "safety": "వాగులలో నీటి రంగు మారడం లేదా నేలలో పగుళ్లను గమనిస్తే వెంటనే ఎత్తైన సురక్షిత ప్రాంతాలకు వెళ్లండి.",
+    "default": "నేను ఆఫ్‌లైన్ మోడ్‌లో ఉన్నాను. ప్రత్యక్ష సమాచారం కోసం ఇంటర్నెట్ కనెక్షన్ తనిఖీ చేయండి."
+  },
+  "ml": {
+    "what_is_landslide": "മഴയും മണ്ണിലെ ഈർപ്പവും കാരണം പാറകളും മണ്ണും മലഞ്ചെരുവുകളിൽ നിന്ന് താഴേക്ക് പതിക്കുന്നതാണ് ഉരുൾപൊട്ടൽ അല്ലെങ്കിൽ മണ്ണടിച്ചിൽ.",
+    "causes": "തുടർച്ചയായ കനത്ത മഴ, മണ്ണിലെ ഉയർന്ന ഈർപ്പം, കുത്തനെയുള്ള ചരിവുകൾ എന്നിവയാണ് പ്രധാന കാരണങ്ങൾ.",
+    "current_risk": "വടക്കുകിഴക്കൻ ഇന്ത്യയിലെ നിലവിലെ അപകടസാധ്യത 76% (ഉയർന്നത്) ആണ്.",
+    "safety": "അരുവികളിലെ വെള്ളത്തിന്റെ നിറം മാറുകയോ വിടവുകൾ കാണുകയോ ചെയ്താൽ ഉടൻ ഉയർന്ന സുരക്ഷിത സ്ഥാനങ്ങളിലേക്ക് മാറുക.",
+    "default": "ഞാൻ ഓഫ്‌ലൈൻ മോഡിലാണ് പ്രവർത്തിക്കുന്നത്. തത്സമയ വിവരങ്ങൾക്ക് ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിക്കുക."
+  }
+}

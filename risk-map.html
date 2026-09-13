@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LandslideGuard NER | Risk Map</title>
+
+    <!-- Leaflet CSS -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
+
+    <!-- Map CSS -->
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                🌍
+            </div>
+
+            <div>
+                <h1>LANDSLIDEGUARD NER</h1>
+                <p>Predict. Monitor. Warn. Protect.</p>
+            </div>
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a href="index.html">Home</a>
+
+            <a href="dashboard.html">
+                Dashboard
+            </a>
+
+            <a href="risk-map.html" class="active">
+                Risk Map
+            </a>
+
+            <a href="prediction.html">
+                Prediction
+            </a>
+
+            <a href="forecast.html">
+                Forecast
+            </a>
+
+            <a href="alerts.html">
+                Alerts
+            </a>
+
+            <a href="analytics.html">
+                Analytics
+            </a>
+
+            <a href="historical-replay.html">
+                Historical Replay
+            </a>
+
+            <a href="safety.html">
+                Safety
+            </a>
+
+        </nav>
+
+
+        <div class="nav-right">
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+
+            <select id="languageSelect">
+                <option value="en">English</option>
+                <option value="ta">தமிழ்</option>
+                <option value="hi">हिन्दी</option>
+                <option value="te">తెలుగు</option>
+                <option value="ml">മലയാളം</option>
+            </select>
+
+            <button class="notification-btn">
+                🔔
+                <span>2</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         MAP PAGE
+    ========================================== -->
+
+    <main class="map-page">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="locationSearch"
+                placeholder="Search Sikkim, Darjeeling..."
+            >
+
+            <button id="searchBtn">
+                🔍
+            </button>
+
+        </div>
+
+
+        <!-- LEFT CONTROLS -->
+
+        <div class="map-controls">
+
+            <button id="myLocationBtn">
+                📍 My Location
+            </button>
+
+            <button id="nerBtn">
+                🏔️ Northeast India
+            </button>
+
+            <button id="sikkimBtn">
+                ⛰️ Sikkim
+            </button>
+
+            <button id="refreshBtn">
+                🔄 Refresh Risk
+            </button>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <div id="map"></div>
+
+
+        <!-- =========================================
+             MAP LAYERS
+        ========================================== -->
+
+        <div class="layers-panel">
+
+            <h3>MAP LAYERS</h3>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="riskLayerCheck"
+                    checked
+                >
+                <span>Risk Zones</span>
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="stationsCheck"
+                    checked
+                >
+                <span>Monitoring Stations</span>
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="historicalCheck"
+                    checked
+                >
+                <span>Historical Landslides</span>
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    id="evacuationCheck"
+                >
+                <span>Evacuation Centers</span>
+            </label>
+
+        </div>
+
+
+        <!-- =========================================
+             LEGEND
+        ========================================== -->
+
+        <div class="legend">
+
+            <h3>LANDSLIDE RISK</h3>
+
+            <div class="legend-item">
+                <span class="legend-circle green"></span>
+                LOW
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-circle yellow"></span>
+                MODERATE
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-circle orange"></span>
+                HIGH
+            </div>
+
+            <div class="legend-item">
+                <span class="legend-circle red"></span>
+                CRITICAL
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             MAP STATUS
+        ========================================== -->
+
+        <div class="map-status">
+
+            <span class="live-dot"></span>
+
+            <div>
+                <strong>LIVE MONITORING</strong>
+                <small id="lastUpdated">
+                    Last updated: Just now
+                </small>
+            </div>
+
+        </div>
+
+
+        <!-- =========================================
+             SOS BUTTON
+        ========================================== -->
+
+        <button class="sos-button" onclick="openEmergency()">
+            SOS
+        </button>
+
+
+    </main>
+
+
+    <!-- =========================================
+         EMERGENCY MODAL
+    ========================================== -->
+
+    <div
+        id="emergencyModal"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                class="close-modal"
+                onclick="closeEmergency()"
+            >
+                ×
+            </button>
+
+            <div class="emergency-icon">
+                🚨
+            </div>
+
+            <h2>Emergency Guidance</h2>
+
+            <p>
+                If you are in an area experiencing a landslide
+                or immediate danger, move to a safer location
+                and follow instructions from local authorities.
+            </p>
+
+            <div class="emergency-actions">
+
+                <button>
+                    📞 Emergency Services
+                </button>
+
+                <button onclick="closeEmergency()">
+                    🏠 Safety Instructions
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         LEAFLET JS
+    ========================================== -->
+
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin="">
+    </script>
+
+    <!-- Map JS -->
+    <script src="js/map.js"></script>
+
+</body>
+</html>

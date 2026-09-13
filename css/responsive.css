@@ -1,0 +1,137 @@
+/* ==========================================================================
+   LANDSLIDEGUARD NER - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Tablet Optimization (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .kpi-cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gauge-card {
+    grid-column: span 6;
+  }
+
+  .timeline-card {
+    grid-column: span 6;
+  }
+
+  .hero-canvas-wrapper {
+    width: 380px;
+    height: 380px;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* Mobile Optimization (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 14px;
+  }
+
+  .brand-text span {
+    display: none;
+  }
+
+  .nav-links {
+    display: none; /* Collapsible or scrollable on mobile */
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: rgba(3, 7, 18, 0.98);
+    border-bottom: 1px solid var(--bg-glass-border);
+    padding: 16px;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  }
+
+  .view-section {
+    padding: 16px;
+  }
+
+  .kpi-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .gauge-card, .timeline-card {
+    grid-column: span 12;
+  }
+
+  .hero-canvas-wrapper {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.95rem;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-buttons button {
+    width: 100%;
+  }
+
+  .chatbot-panel {
+    right: 12px;
+    left: 12px;
+    width: auto;
+    bottom: 84px;
+    height: calc(100vh - 100px);
+  }
+
+  .critical-alert-banner {
+    width: 94%;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .alert-banner-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Accessibility Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .gauge-pulse-ring, .marker-pulse, .emergency-fab {
+    animation: none !important;
+  }
+}
