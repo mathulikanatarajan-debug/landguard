@@ -2,7 +2,7 @@
    LANDSLIDEGUARD NER - SERVICE WORKER (PWA Offline Caching)
    ========================================================================== */
 
-const CACHE_NAME = "landguard-v1.0.0";
+const CACHE_NAME = "landguard-v1.0.1";
 const ASSETS_TO_CACHE = [
   "./",
   "./index.html",
